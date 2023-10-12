@@ -1,0 +1,23 @@
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+
+Serial.begin(9600);
+
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+int sensorValue = analogRead(A4);
+Serial.println(sensorValue);
+if (sensorValue > 270){
+  Serial.println("Gas Leaking!!");
+}
+else{
+  Serial.println("Everything Okay");
+}
+delay(1000);
+}
